@@ -1,2 +1,2 @@
 # WebSockets
-WebSockets POC
+WebSockets POC in C# .net 5.0
