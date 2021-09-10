@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">WebSockets Example</h1>
+    <h4> Source: https://sahansera.dev/understanding-websockets-with-aspnetcore-5/</h4>
+    <hr/>
+    <input type="button" value="Call" onclick="CallWebSockets()" />
+    <input type="button" value="Close" onclick="CallWebSockets()" />
+    
+</div>
+
+<script>
+    //Initialize the connection
+    let webSocket = new WebSocket('wss://localhost:5001/ws');
+
+    function CallWebSockets()
+    {
+        webSocket.send("Client: Hello");
+        webSocket.send("Client: Hello2");
+    }
+    
+    function Close()
+    {
+        webSocket.close();
+    }
+
+
+</script>
